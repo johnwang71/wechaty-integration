@@ -19,6 +19,8 @@ BTW, please apply donut token from juzibot, and replace in mybot.file.
 
 #### install dependent javascript lib
 ```NPM
+cd wechaty-integration
+npm init
 npm install express
 npm install body-parser
 ```
