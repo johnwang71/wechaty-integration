@@ -1,6 +1,7 @@
 import { Wechaty } from 'wechaty'
 import { ScanStatus } from 'wechaty-puppet'
 import QrcodeTerminal from 'qrcode-terminal'
+import request from 'request'
 import express from 'express'
 import bodyParser from 'body-parser'
 
@@ -29,7 +30,7 @@ bot
   })
   .on('message', async message => {
     console.log(`message: ${JSON.stringify(message)}`)
-    //TODO: SUBMIT or SAVE MSG to your backend system
+    request.post("YOUR_BACKEND_MSG_RECEIVER", {json: true, body: message.payload}) //SUBMIT MSG to your backend system
   })
   .on('room-invite', async roomInvitation => {
     try {

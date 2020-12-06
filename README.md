@@ -17,15 +17,9 @@ git clone https://github.com/johnwang71/wechaty-integration.git
 ```
 BTW, please apply donut token from juzibot, and replace in mybot.file.
 
-#### install dependent javascript lib
-```NPM
-cd wechaty-integration
-npm init
-npm install express
-npm install body-parser
-```
 #### Startup your bot
 ``` docker run
+cd wechaty-integration
 docker run -ti --rm -p 1818:1818 --volume="$(pwd)":/bot wechaty/wechaty mybot.js
 ```
 You should scan the QR-Code with your wechat at the first time.
