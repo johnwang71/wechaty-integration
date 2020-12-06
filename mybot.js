@@ -23,13 +23,10 @@ bot
     }
   })
   .on('login', async user => {
-    console.log(`user: ${JSON.stringify(user)}`)
-    var waiting = [] //insert new friends' weixin ID waiting to add
-    for (var i = 0; i < waiting.length; i++)
-      await bot.Friendship.add({id: waiting[i]},"HI BUDDY").catch(err => console.error("Add " + waiting[i] + " failed: " + err))
+    console.log(`user: ${JSON.stringify(user)}`) //Log current user info
   })
   .on('message', async message => {
-    console.log(`message: ${JSON.stringify(message)}`)
+    console.log(`message: ${JSON.stringify(message)}`) //Log msg
     request.post("YOUR_BACKEND_MSG_RECEIVER", {json: true, body: message.payload}) //SUBMIT MSG to your backend system
   })
   .on('room-invite', async roomInvitation => {
