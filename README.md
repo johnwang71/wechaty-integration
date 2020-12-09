@@ -16,7 +16,7 @@ docker pull wechaty/wechaty
 ```clone
 git clone https://github.com/johnwang71/wechaty-integration.git
 ```
-BTW, please apply donut token from juzibot, and replace in mybot.file.
+BTW, please apply donut token from juzibot, and replace in mybot.js file.
 
 #### Startup your bot
 ``` docker run
